@@ -2,7 +2,7 @@
 
 Poster on ... at [CHTC Researcher Forum][Forum] on February 13, 2026.
 
-## [Poster Criteria][Forum]
+## [Poster Criteria](https://chtc.cs.wisc.edu/uw-research-computing/researcher-forum-2026#call-for-posters)
 
 We're looking for posters that show what you are doing with our resources and how CHTC fits into your work!
 
