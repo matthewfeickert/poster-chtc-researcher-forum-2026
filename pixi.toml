@@ -11,3 +11,4 @@ cmd = "python ./qr_code.py"
 [dependencies]
 texlive-core = ">=20230313,<20230314"
 qrcode = ">=8.2,<9"
+rsync = ">=3.4.1,<4"
