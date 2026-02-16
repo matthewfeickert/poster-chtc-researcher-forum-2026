@@ -86,42 +86,15 @@
 }{
  % LEFT COLUMN
  \title{Accelerating hardware-accelerated science}
- \author{{\href{https://www.matthewfeickert.com/}{\underline{Matthew Feickert}$^{1}$}}}
  \vspace{0.5em}
+ \author{{\href{https://www.matthewfeickert.com/}{\underline{Matthew Feickert}$^{1}$}}}
+ \vspace{1.0em}
  \institution{1 University of Wisconsin--Madison Data Science Institute}
  %
  \section{Hardware-accelerated science}
  Machine learning is becoming a standard part of the modern scientist's toolkit.
  As a result, the use of \textbf{hardware accelerators} (e.g. GPUs) in scientific software workflows is increasingly common.
  Historically, GPU-enabled software could be difficult to work with and required expertise to deploy.
-
-%  One of the most widely used statistical models in \textbf{high energy physics} for binned measurements and searches
-
-%  \begin{center}
-%   \includegraphics[width=\textwidth]{HistFactory_result_examples.png}
-%  \end{center}
-%  %
-%  \vspace{-0.5em}
-%  \begin{minipage}{0.29\textwidth}
-%   \begin{center}
-%    \textbf{Standard Model}
-%   \end{center}
-%  \end{minipage}%
-%  \quad
-%  \begin{minipage}{0.36\textwidth}
-%   \begin{center}
-%    \textbf{Supersymmetry}
-%   \end{center}
-%  \end{minipage}%
-%  \quad
-%  \begin{minipage}{0.27\textwidth}
-%   \begin{center}
-%    \textbf{Exotic Physics}
-%   \end{center}
-%  \end{minipage}%
-%  %
-%  \vspace{2em}
-%  %
 
  \vspace{1.0em}
  \textbf{Fully reproducible environments with Pixi}
@@ -159,35 +132,11 @@
   \item Linux container image for GPU workflows can be automatically built and deployed on code changes
   \item Fast launching with CHTC's \texttt{/staging}
  \end{itemize}
-
-%  \textcolor{blue}{Primary Measurement}:
-%  \begin{itemize}
-%   \item Multiple disjoint ``channels'' (e.g. event observables) each with multiple bins of data
-%   \item Example parameter of interest: strength of physics signal, $\mu$
-%  \end{itemize}
-%  \textcolor{red}{Auxiliary Measurements}:
-%  \begin{itemize}
-%   \item Nuisance parameters (e.g. in-situ measurements of background samples)
-%   \item Systematic uncertainties (e.g. normalization, shape, luminosity)
-%  \end{itemize}
-
- % \vspace{-1em}
- %
-%  \vfill
-%  \subsection{Hardware Acceleration}
-%  For ML-library tensor backends the computational graph can be transparently placed on hardware accelerators: \textbf{GPUs} and \textbf{TPUs} for order of magnitude speed-up in computation
-%  \begin{center}
-%   \includegraphics[width=\textwidth]{scaling_hardware.pdf}
-%  \end{center}
 }{
  % RIGHT COLUMN
 
  \textbf{HTCondor container universe}
  \vspace{1.0em}
-  % \begin{center}
-  %  \href{https://htcondor.org/}{\includegraphics[width=0.8\textwidth]{htcondor_logo.pdf}}
-  % \end{center}
-
  \begin{minipage}{0.50\textwidth}
   \begin{center}
    \href{https://chtc.cs.wisc.edu/}{\includegraphics[width=0.85\textwidth]{chtc_logo.pdf}}
@@ -213,32 +162,6 @@
  \end{center}
  \textbf{TODO TODO TODO TODO}
 %  The computational graph of multidimensional array operations for likelihood function of a physics analysis defined through HistFactory
-
-%  %
-%  \vspace{0.5em}
-%  %
-%  \begin{minipage}{0.33\textwidth}
-%   \begin{center}
-%    \includegraphics[width=\textwidth]{NumPy_logo.pdf}
-%   \end{center}
-%  \end{minipage}%
-%  \quad
-%  \begin{minipage}{0.33\textwidth}
-%   \begin{center}
-%    \includegraphics[width=\textwidth]{TensorFlow_logo.pdf}
-%   \end{center}
-%  \end{minipage}%
-%  \quad
-%  \begin{minipage}{0.33\textwidth}
-%   \begin{center}
-%    \includegraphics[width=0.85\textwidth]{Pytorch_logo.pdf}
-%   \end{center}
-%  \end{minipage}%
-%  %
-%  \vspace{0.5em}
-%  %
-
-%  Use of $n$-dimensional array (``tensor'') operations through a common API layer around high performance tensor libraries
 
 %  \vspace{-1em}
  \subsection{Applications in DSI driven science}
