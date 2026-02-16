@@ -4,6 +4,7 @@
 \usepackage{bm}
 \graphicspath{{figures/}}
 \usepackage[hidelinks]{hyperref}
+\usepackage{ragged2e}
 
 % Uncomment the following commands to customise the format
 
@@ -67,12 +68,13 @@
 \betterposter{
  % MAIN COLUMN
  \maincolumn{
+ \RaggedRight
+  \begin{raggedright}
   % Main space
   % TODO: Fix alignment with Claude
-  % CHTC resources, \\Linux container images, \\and Pixi make \textbf{reproducible GPU workflows} for complex science \textbf{easy}
-  \textbf{Reproducible GPU environments} with Pixi, Linux container images, and CHTC resources make complex scientific workflows \textbf{easy to run}
-  % CHTC resources, \\Linux container images, \\and Pixi make  for complex science \textbf{easy}
-  % \textbf{pyhf} is a \textbf{pure Python} statistical fitting library that uses \textbf{tensors} and \textbf{autograd} to speed up physics analysis at the LHC
+  % \textbf{Reproducible GPU environments} with Pixi, Linux container images, and CHTC resources make complex scientific workflows \textbf{easy to run}
+  \textbf{Reproducible GPU workflows} with Pixi, Linux container images, and CHTC resources make complex scientific tasks \textbf{easy to run}
+  \end{raggedright}
  }{
   % Bottom space
 
@@ -88,17 +90,20 @@
 
 }{
  % LEFT COLUMN
+ \RaggedRight
 
 %  \title{Accelerating\\hardware-accelerated\\science}
- \title{Accelerating\\hardware\\accelerated\\science}
- \vspace{-1em}
+ \title{Accelerating hardware\\
+ accelerated science}
+%  \vspace{-1em}
 %  \textbf{Reproducible hardware-accelerated science}
 
 %  \author{{\href{https://www.matthewfeickert.com/}{\underline{Matthew Feickert}$^{1}$}}, \href{https://dsi.wisc.edu/staff/cranmer-kyle/}{Kyle Cranmer$^{1}$}}
  \author{{\href{https://www.matthewfeickert.com/}{\underline{Matthew Feickert}$^{1}$}}}
+ \vspace{0.5em}
  \institution{1 University of Wisconsin--Madison Data Science Institute}
  %
- \section{Hardware-accelerated Science}
+ \section{Hardware-accelerated science}
  Machine learning is becoming a standard part of the modern scientist's toolkit.
  As a result, the use of \textbf{hardware accelerators} (e.g. GPUs) in scientific software workflows is increasingly common.
  Historically, GPU-enabled software could be difficult to work with and required expertise to deploy.
@@ -189,6 +194,7 @@
 %  \end{center}
 }{
  % RIGHT COLUMN
+ \RaggedRight
 
  \textbf{HTCondor container universe}
  \vspace{1.0em}
@@ -249,7 +255,7 @@
 %  Use of $n$-dimensional array (``tensor'') operations through a common API layer around high performance tensor libraries
 
 %  \vspace{-1em}
- \subsection{Applications in DSI Science}
+ \subsection{Applications in DSI driven science}
  Data scientists and researchers at the \textbf{University of Wisconsin--Madison Data Science Institute} are using this workflow pattern across:
  \begin{itemize}
   \item High Energy Physics applications of simulation-based Inference
@@ -257,7 +263,7 @@
   \item Large-scale simulation of protein motions using molecular dynamics
  \end{itemize}
 
- \subsection{More Information}
+ \subsection{More information}
  \begin{itemize}
   \item Matthew Feickert, Ruben Arts, John Kirkham, \emph{Reproducible Machine Learning Workflows for
 Scientists with Pixi}, \\\textbf{DOI: \href{https://doi.org/10.25080/nwuf8465}{10.25080/nwuf8465}}
