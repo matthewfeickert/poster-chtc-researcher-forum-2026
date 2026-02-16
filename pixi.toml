@@ -8,6 +8,11 @@ version = "0.1.0"
 description = "Generate QR code for poster"
 cmd = "python ./qr_code.py"
 
+[tasks.poster]
+cmd = """
+latexmk -pdflatex -logfilewarnings -halt-on-error poster
+"""
+
 [dependencies]
 texlive-core = ">=20230313,<20230314"
 qrcode = ">=8.2,<9"
