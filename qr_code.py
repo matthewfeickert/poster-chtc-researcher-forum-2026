@@ -6,7 +6,7 @@ import qrcode.image.svg
 
 
 def main():
-    url = "https://doi.org/10.25080/nwuf8465"
+    url = "https://github.com/matthewfeickert/poster-chtc-researcher-forum-2026"
     factory = qrcode.image.svg.SvgFillImage
     img = qrcode.make(url, image_factory=factory)
 
