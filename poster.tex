@@ -69,7 +69,7 @@
  \maincolumn{
   % Main space
   % \textbf{Reproducible GPU environments} with Pixi, Linux container images, and CHTC resources make complex scientific workflows \textbf{easy to run}
-  \textbf{Reproducible GPU workflows} with Pixi, Linux container images, and CHTC resources make complex scientific tasks \textbf{easy to run}
+  \textbf{Reproducible GPU workflows} with Pixi, Linux container images, and CHTC resources make complex hardware-accelerated scientific tasks \textbf{easy to run at scale}
  }{
   % Bottom space
 
@@ -87,7 +87,7 @@
  % LEFT COLUMN
  \title{Accelerating hardware-accelerated science}
  \vspace{0.5em}
- \author{{\href{https://www.matthewfeickert.com/}{\underline{Matthew Feickert}$^{1}$}}}
+ \author{{\href{https://www.matthewfeickert.com/}{Matthew Feickert}$^{1}$}}
  \vspace{1.0em}
  \institution{1 University of Wisconsin--Madison Data Science Institute}
  %
@@ -97,15 +97,16 @@
  Historically, GPU-enabled software could be difficult to work with and required expertise to deploy.
 
  \vspace{1.0em}
- \textbf{Fully reproducible environments with Pixi}
+ \textbf{Reproducible environments with Pixi}
+ \vspace{1.0em}
   \begin{center}
    \href{https://pixi.prefix.dev/}{\includegraphics[width=0.5\textwidth]{tools_pixi.pdf}}
   \end{center}
  \begin{itemize}
-  \item Declaratively create fully reproducible locked environments with conda packages (ANY language) and Python packages
+  \item Declaratively create \textbf{fully reproducible locked environments} with \textbf{conda} packages (ANY language) and \textbf{Python} packages
   \item Locking: automatic and Rust-fast
   \item Define host-specific expectations of hardware resources (e.g. CUDA version)
-  \item Resolve environments for platforms different than solve machine (e.g. solve on Mac laptop, run on Linux machine with CUDA)
+  \item Resolve environments for \textbf{multiple different platforms} than solve machine (e.g. solve on Mac laptop, run on Linux machine with CUDA)
  \end{itemize}
 
  \vspace{1.0em}
@@ -114,28 +115,27 @@
  \vspace{1.0em}
  \begin{minipage}{0.50\textwidth}
   \begin{center}
-   \href{https://apptainer.org/}{\includegraphics[width=0.8\textwidth]{apptainer_logo.pdf}}
+   \href{https://www.docker.com/}{\includegraphics[width=0.8\textwidth]{docker-logo-blue.pdf}}
   \end{center}
  \end{minipage}%
  \hfill
  \begin{minipage}{0.50\textwidth}
   \begin{center}
-   \href{https://www.docker.com/}{\includegraphics[width=0.8\textwidth]{docker-logo-blue.pdf}}
+   \href{https://apptainer.org/}{\includegraphics[width=0.8\textwidth]{apptainer_logo.pdf}}
   \end{center}
  \end{minipage}%
  \vspace{1.0em}
 
  \begin{itemize}
-  % \item Linux container technology (Docker, Apptainer) deploy platform-specific software environments through container images
-  \item Docker, Apptainer deploy platform-specific software environments through container images
-  \item With Pixi environment, Dockerfile or Apptainer definition files reduce to template
-  \item Linux container image for GPU workflows can be automatically built and deployed on code changes
-  \item Fast launching with CHTC's \texttt{/staging}
+  \item Deploy software environments to worker nodes through Docker and Apptainer \textbf{container images}
+  \item With Pixi environment, Dockerfile or Apptainer definition files become a \textbf{simple template}
+  \item Changes to environment can trigger rebuilds and redeployments of container images
+  \item Fast launching with CHTC's \texttt{/staging} and OSDF
  \end{itemize}
 }{
  % RIGHT COLUMN
 
- \textbf{HTCondor container universe}
+ \textbf{HTCondor containerized GPU jobs}
 
  \vspace{1.0em}
  \begin{minipage}{0.50\textwidth}
@@ -151,23 +151,21 @@
  \end{minipage}%
  \vspace{1.0em}
  \begin{itemize}
-  \item CHTC's HTCondor deployments support container universe
-  \item GPU and CUDA capabilities specified in submit description files
+  \item CHTC's HTCondor deployment support \textbf{container universe}
+  \item Specific control over \textbf{GPU and CUDA capabilities} through submit description files
   \item Parallel tasks can scaleout across CHTC GPU nodes
  \end{itemize}
 
  \subsection{Implementation}
- \textbf{TODO TODO TODO TODO}
  \begin{center}
-  \includegraphics[width=0.2\textwidth]{computational_graph3.pdf}
+  \includegraphics[width=0.7\textwidth]{workflow_diagram.pdf}
  \end{center}
- \textbf{TODO TODO TODO TODO Design an image that shows laptop and Pixi and then Docker and CHTC deployment}
 %  The computational graph of multidimensional array operations for likelihood function of a physics analysis defined through HistFactory
 
  \subsection{Applications in DSI driven science}
  Data scientists and researchers at the \textbf{University of Wisconsin--Madison Data Science Institute} are using this workflow pattern across:
  \begin{itemize}
-  \item High Energy Physics applications of simulation-based Inference
+  \item High Energy Physics applications of simulation-based inference
   \item High-Resolution Rapid Refresh (HRRR) weather forecasting
   \item Large-scale simulation of protein motions using molecular dynamics
  \end{itemize}
