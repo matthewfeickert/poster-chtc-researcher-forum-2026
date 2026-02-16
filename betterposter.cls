@@ -100,7 +100,7 @@
 
 \DeclareOption{a0paper}{
 % \geometry{a0paper}
-\geometry{paperwidth=42in,paperheight=59.3784355179704in}
+\geometry{paperwidth=36in,paperheight=48in}
 }
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
