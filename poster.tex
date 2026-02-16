@@ -89,7 +89,8 @@
 }{
  % LEFT COLUMN
 
- \title{Accelerating\\hardware-accelerated\\science}
+%  \title{Accelerating\\hardware-accelerated\\science}
+ \title{Accelerating\\hardware\\accelerated\\science}
  \vspace{-1em}
 %  \textbf{Reproducible hardware-accelerated science}
 
@@ -100,7 +101,7 @@
  \section{Hardware-accelerated Science}
  Machine learning is becoming a standard part of the modern scientist's toolkit.
  As a result, the use of \textbf{hardware accelerators} (e.g. GPUs) in scientific software workflows is increasingly common.
- GPU enabled software can be difficult to work with and often requires expertise to deploy.
+ Historically, GPU-enabled software could be difficult to work with and required expertise to deploy.
 
 %  One of the most widely used statistical models in \textbf{high energy physics} for binned measurements and searches
 
@@ -133,20 +134,38 @@
  \vspace{1.0em}
  \textbf{Fully reproducible environments with Pixi}
   \begin{center}
-   \includegraphics[width=\textwidth]{tools_pixi.pdf}
+   \includegraphics[width=0.5\textwidth]{tools_pixi.pdf}
   \end{center}
  \begin{itemize}
-  \item X
+  \item Declaratively create fully reproducible locked environments with conda packages (ANY language) and Python packages
+  \item Locking: automatic and Rust-fast
+  \item Define host-specific expectations of hardware resources (e.g. CUDA version)
+  \item Resolve environments for platforms different than solve machine (e.g. solve on Mac laptop, run on Linux machine with CUDA)
  \end{itemize}
 
+ \vspace{1.0em}
  \textbf{Linux container distributions}
- \begin{itemize}
-  \item X
- \end{itemize}
 
- \textbf{HTCondor container universe}
+ \vspace{1.0em}
+ \begin{minipage}{0.50\textwidth}
+  \begin{center}
+   \href{https://apptainer.org/}{\includegraphics[width=0.8\textwidth]{apptainer_logo.pdf}}
+  \end{center}
+ \end{minipage}%
+ \hfill
+ \begin{minipage}{0.50\textwidth}
+  \begin{center}
+   \href{https://www.docker.com/}{\includegraphics[width=0.8\textwidth]{docker-logo-blue.pdf}}
+  \end{center}
+ \end{minipage}%
+ \vspace{1.0em}
+
  \begin{itemize}
-  \item X
+  % \item Linux container technology (Docker, Apptainer) deploy platform-specific software environments through container images
+  \item Docker, Apptainer deploy platform-specific software environments through container images
+  \item With Pixi environment, Dockerfile or Apptainer definition files reduce to template
+  \item Linux container image for GPU workflows can be automatically built and deployed on code changes
+  \item Fast launching with CHTC's \texttt{/staging}
  \end{itemize}
 
 %  \textcolor{blue}{Primary Measurement}:
@@ -162,53 +181,74 @@
 
  % \vspace{-1em}
  %
- \vfill
- \subsection{Hardware Acceleration}
- For ML-library tensor backends the computational graph can be transparently placed on hardware accelerators: \textbf{GPUs} and \textbf{TPUs} for order of magnitude speed-up in computation
- \begin{center}
-  \includegraphics[width=\textwidth]{scaling_hardware.pdf}
- \end{center}
+%  \vfill
+%  \subsection{Hardware Acceleration}
+%  For ML-library tensor backends the computational graph can be transparently placed on hardware accelerators: \textbf{GPUs} and \textbf{TPUs} for order of magnitude speed-up in computation
+%  \begin{center}
+%   \includegraphics[width=\textwidth]{scaling_hardware.pdf}
+%  \end{center}
 }{
  % RIGHT COLUMN
 
+ \textbf{HTCondor container universe}
+ \vspace{1.0em}
+  \begin{center}
+   \href{https://htcondor.org/}{\includegraphics[width=0.8\textwidth]{htcondor_logo.pdf}}
+  \end{center}
+ \vspace{1.0em}
+ \begin{itemize}
+  \item CHTC's HTCondor deployments support container universe
+  \item GPU and CUDA capabilities specified in submit description files
+  \item Parallel tasks can scaleout across CHTC GPU nodes
+ \end{itemize}
+
  \subsection{Implementation}
  \begin{center}
-  \includegraphics[width=0.9\textwidth]{computational_graph3.pdf}
+  \includegraphics[width=0.2\textwidth]{computational_graph3.pdf}
  \end{center}
  The computational graph of multidimensional array operations for likelihood function of a physics analysis defined through HistFactory
 
- %
- \vspace{0.5em}
- %
- \begin{minipage}{0.33\textwidth}
-  \begin{center}
-   \includegraphics[width=\textwidth]{NumPy_logo.pdf}
-  \end{center}
- \end{minipage}%
- \quad
- \begin{minipage}{0.33\textwidth}
-  \begin{center}
-   \includegraphics[width=\textwidth]{TensorFlow_logo.pdf}
-  \end{center}
- \end{minipage}%
- \quad
- \begin{minipage}{0.33\textwidth}
-  \begin{center}
-   \includegraphics[width=0.85\textwidth]{Pytorch_logo.pdf}
-  \end{center}
- \end{minipage}%
- %
- \vspace{0.5em}
- %
+%  %
+%  \vspace{0.5em}
+%  %
+%  \begin{minipage}{0.33\textwidth}
+%   \begin{center}
+%    \includegraphics[width=\textwidth]{NumPy_logo.pdf}
+%   \end{center}
+%  \end{minipage}%
+%  \quad
+%  \begin{minipage}{0.33\textwidth}
+%   \begin{center}
+%    \includegraphics[width=\textwidth]{TensorFlow_logo.pdf}
+%   \end{center}
+%  \end{minipage}%
+%  \quad
+%  \begin{minipage}{0.33\textwidth}
+%   \begin{center}
+%    \includegraphics[width=0.85\textwidth]{Pytorch_logo.pdf}
+%   \end{center}
+%  \end{minipage}%
+%  %
+%  \vspace{0.5em}
+%  %
 
- Use of $n$-dimensional array (``tensor'') operations through a common API layer around high performance tensor libraries
+%  Use of $n$-dimensional array (``tensor'') operations through a common API layer around high performance tensor libraries
 
- \vspace{-1em}
+%  \vspace{-1em}
  \subsection{Applications in DSI Science}
- Data scientists and researchers at the \textbf{University of Wisconsin--Madison Data Science Institute} are using this workflow pattern for work across:
+ Data scientists and researchers at the \textbf{University of Wisconsin--Madison Data Science Institute} are using this workflow pattern across:
  \begin{itemize}
   \item High Energy Physics applications of simulation-based Inference
   \item High-Resolution Rapid Refresh (HRRR) weather forecasting
+  \item Large-scale simulation of protein motions using molecular dynamics
+ \end{itemize}
+
+ \subsection{More Information}
+ \begin{itemize}
+  \item Matthew Feickert, Ruben Arts, John Kirkham, \emph{Reproducible Machine Learning Workflows for
+Scientists with Pixi}, \\\textbf{DOI: \href{https://doi.org/10.25080/nwuf8465}{10.25080/nwuf8465}}
+  \item \href{https://github.com/CHTC/templates-GPUs}{\textbf{github.com/CHTC/templates-GPUs}}
+  \item \href{https://github.com/CHTC/recipes}{\textbf{github.com/CHTC/recipes}}
  \end{itemize}
 
 %  The full likelihood can be expressed as a \textbf{single JSON document}\\
