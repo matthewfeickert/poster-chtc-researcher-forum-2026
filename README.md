@@ -13,6 +13,10 @@ We're looking for posters that show what you are doing with our resources and ho
 * **Automation and workflows**: How did you automate your work? What strategies do you use to create your workflow?
 * **Feedback**: What worked for you? What didn't work for you?
 
+### Poster Dimensions
+
+* 4 feet by 3 feet
+
 ## Acknowledgements
 
 - Built using a modified version of [Rafael Bailo](https://github.com/rafaelbailo)'s [Better Poster Latex Template](https://github.com/rafaelbailo/betterposter-latex-template)
