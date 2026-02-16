@@ -54,6 +54,9 @@
 %% Graphics
 \RequirePackage{graphicx}
 
+%% Ragged right text alignment
+\RequirePackage{ragged2e}
+
 %% AMS packages
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
@@ -154,7 +157,7 @@
 ][t]{
 \dimexpr 1.0\textwidth-2.0#2\relax
 }
-{\fontsizestandard #3}
+{\fontsizestandard\RaggedRight #3}
 \end{minipage}
 \end{center}
 \end{minipage}
@@ -163,7 +166,7 @@
 %% Main column command
 \newcommand{\maincolumn}[2]{
 \vfill{
-\fontsizemain
+\fontsizemain\RaggedRight
 
 #1
 
@@ -171,6 +174,7 @@
 }
 \vfill
 \begin{minipage}[t][0.25\textheight][b]{\textwidth}
+\RaggedRight
 #2
 \end{minipage}
 }
