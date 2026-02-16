@@ -9,9 +9,9 @@
 
 %% Setting the width of columns
 % Left column
-\setlength{\leftbarwidth}{0.27\paperwidth}
+\setlength{\leftbarwidth}{0.2\paperwidth}
 % Right column
-\setlength{\rightbarwidth}{0.27\paperwidth}
+\setlength{\rightbarwidth}{0.2\paperwidth}
 
 %% Setting the column margins
 % Horizontal margin
@@ -26,9 +26,15 @@
 % Text font
 \renewcommand{\fontsizestandard}{\fontsize{32}{46} \selectfont}
 % Main column font
-\renewcommand{\fontsizemain}{\fontsize{148.00}{280.00} \selectfont}
+% \renewcommand{\fontsizemain}{\fontsize{148.00}{280.00} \selectfont}
+% Set baseline skip to 1.4 times font size
+% \renewcommand{\fontsizemain}{\fontsize{135}{162} \selectfont}
+% \renewcommand{\fontsizemain}{\fontsize{130}{156} \selectfont}
+\renewcommand{\fontsizemain}{\fontsize{128}{180} \selectfont}
+% \renewcommand{\fontsizemain}{\fontsize{130}{182} \selectfont}
 % Title font
-\renewcommand{\fontsizetitle}{\fontsize{101.50}{152.00} \selectfont}
+% \renewcommand{\fontsizetitle}{\fontsize{101.50}{152.00} \selectfont}
+\renewcommand{\fontsizetitle}{\fontsize{80}{112} \selectfont}
 % Author font
 \renewcommand{\fontsizeauthor}{\fontsize{33.55}{47.3} \selectfont}
 \newcommand{\fontsizeinstitution}{\fontsize{20}{25} \selectfont}
@@ -60,64 +66,75 @@
 \begin{document}
 \betterposter{
  % MAIN COLUMN
-
  \maincolumn{
   % Main space
-
-  CHTC resources,\\
-  Linux containers, and Pixi make reproducible GPU workflows for complex science easy
+  % TODO: Fix alignment with Claude
+  % CHTC resources, \\Linux container images, \\and Pixi make \textbf{reproducible GPU workflows} for complex science \textbf{easy}
+  \textbf{Reproducible GPU environments} with Pixi, Linux container images, and CHTC resources make complex scientific workflows \textbf{easy to run}
+  % CHTC resources, \\Linux container images, \\and Pixi make  for complex science \textbf{easy}
   % \textbf{pyhf} is a \textbf{pure Python} statistical fitting library that uses \textbf{tensors} and \textbf{autograd} to speed up physics analysis at the LHC
  }{
   % Bottom space
 
+\begin{center}
   % QR code
   \qrcode{qr_code.pdf}{smartphoneWhite}{
    \textbf{Take a picture} to
    \\visit the CHTC GPU workflow example repository\\
    \href{https://github.com/CHTC/templates-GPUs}{github.com/CHTC/templates-GPUs}
   }
- }
+\end{center}
+}
 
 }{
  % LEFT COLUMN
 
- \title{Enabling science}
+ \title{Accelerating\\hardware-accelerated\\science}
  \vspace{-1em}
- \textbf{Reproducible hardware-accelerated science}
+%  \textbf{Reproducible hardware-accelerated science}
 
- \author{{\href{https://www.matthewfeickert.com/}{\underline{Matthew Feickert}$^{1}$}}, \href{https://dsi.wisc.edu/staff/cranmer-kyle/}{Kyle Cranmer$^{1}$}}
+%  \author{{\href{https://www.matthewfeickert.com/}{\underline{Matthew Feickert}$^{1}$}}, \href{https://dsi.wisc.edu/staff/cranmer-kyle/}{Kyle Cranmer$^{1}$}}
+ \author{{\href{https://www.matthewfeickert.com/}{\underline{Matthew Feickert}$^{1}$}}}
  \institution{1 University of Wisconsin--Madison Data Science Institute}
  %
- \section{HistFactory}
- One of the most widely used statistical models in \textbf{high energy physics} for binned measurements and searches
+ \section{Hardware-accelerated Science}
+ Machine learning is becoming a standard part of the modern scientist's toolkit.
+ As a result, the use of \textbf{hardware accelerators} (e.g. GPUs) in scientific software workflows is increasingly common.
+ GPU enabled software can be difficult to work with and often requires expertise to deploy.
 
- \begin{center}
-  \includegraphics[width=\textwidth]{HistFactory_result_examples.png}
- \end{center}
- %
- \vspace{-0.5em}
- \begin{minipage}{0.29\textwidth}
-  \begin{center}
-   \textbf{Standard Model}
-  \end{center}
- \end{minipage}%
- \quad
- \begin{minipage}{0.36\textwidth}
-  \begin{center}
-   \textbf{Supersymmetry}
-  \end{center}
- \end{minipage}%
- \quad
- \begin{minipage}{0.27\textwidth}
-  \begin{center}
-   \textbf{Exotic Physics}
-  \end{center}
- \end{minipage}%
- %
- \vspace{2em}
- %
+%  One of the most widely used statistical models in \textbf{high energy physics} for binned measurements and searches
 
+%  \begin{center}
+%   \includegraphics[width=\textwidth]{HistFactory_result_examples.png}
+%  \end{center}
+%  %
+%  \vspace{-0.5em}
+%  \begin{minipage}{0.29\textwidth}
+%   \begin{center}
+%    \textbf{Standard Model}
+%   \end{center}
+%  \end{minipage}%
+%  \quad
+%  \begin{minipage}{0.36\textwidth}
+%   \begin{center}
+%    \textbf{Supersymmetry}
+%   \end{center}
+%  \end{minipage}%
+%  \quad
+%  \begin{minipage}{0.27\textwidth}
+%   \begin{center}
+%    \textbf{Exotic Physics}
+%   \end{center}
+%  \end{minipage}%
+%  %
+%  \vspace{2em}
+%  %
+
+ \vspace{1.0em}
  \textbf{Fully reproducible environments with Pixi}
+  \begin{center}
+   \includegraphics[width=\textwidth]{tools_pixi.pdf}
+  \end{center}
  \begin{itemize}
   \item X
  \end{itemize}
@@ -132,16 +149,16 @@
   \item X
  \end{itemize}
 
- \textcolor{blue}{Primary Measurement}:
- \begin{itemize}
-  \item Multiple disjoint ``channels'' (e.g. event observables) each with multiple bins of data
-  \item Example parameter of interest: strength of physics signal, $\mu$
- \end{itemize}
- \textcolor{red}{Auxiliary Measurements}:
- \begin{itemize}
-  \item Nuisance parameters (e.g. in-situ measurements of background samples)
-  \item Systematic uncertainties (e.g. normalization, shape, luminosity)
- \end{itemize}
+%  \textcolor{blue}{Primary Measurement}:
+%  \begin{itemize}
+%   \item Multiple disjoint ``channels'' (e.g. event observables) each with multiple bins of data
+%   \item Example parameter of interest: strength of physics signal, $\mu$
+%  \end{itemize}
+%  \textcolor{red}{Auxiliary Measurements}:
+%  \begin{itemize}
+%   \item Nuisance parameters (e.g. in-situ measurements of background samples)
+%   \item Systematic uncertainties (e.g. normalization, shape, luminosity)
+%  \end{itemize}
 
  % \vspace{-1em}
  %
@@ -187,38 +204,47 @@
  Use of $n$-dimensional array (``tensor'') operations through a common API layer around high performance tensor libraries
 
  \vspace{-1em}
- \subsection{JSON Specification}
- The full likelihood can be expressed as a \textbf{single JSON document}\\
- Archive friendly for analysis presentation
- \vspace{0.5em}
- \begin{center}
-  \includegraphics[width=0.9\textwidth]{carbon_JSON_spec.png}
- \end{center}
- \vspace{-1em}
- \begin{center}
-  {\fontsizeinstitution\textbf{Example:} 2 binned single channel with 2 samples with 1 parameter of interest and 1 nuisance parameter}
- \end{center}
- \begin{center}
-  \includegraphics[width=0.9\textwidth]{carbon_pyhf_CLs.png}
- \end{center}
+ \subsection{Applications in DSI Science}
+ Data scientists and researchers at the \textbf{University of Wisconsin--Madison Data Science Institute} are using this workflow pattern for work across:
+ \begin{itemize}
+  \item High Energy Physics applications of simulation-based Inference
+  \item High-Resolution Rapid Refresh (HRRR) weather forecasting
+ \end{itemize}
+
+%  The full likelihood can be expressed as a \textbf{single JSON document}\\
+%  Archive friendly for analysis presentation
+%  \vspace{0.5em}
+%  \begin{center}
+%   \includegraphics[width=0.9\textwidth]{carbon_JSON_spec.png}
+%  \end{center}
+%  \vspace{-1em}
+%  \begin{center}
+%   {\fontsizeinstitution\textbf{Example:} 2 binned single channel with 2 samples with 1 parameter of interest and 1 nuisance parameter}
+%  \end{center}
+%  \begin{center}
+%   \includegraphics[width=0.9\textwidth]{carbon_pyhf_CLs.png}
+%  \end{center}
 
  \vspace{1em}
  \vfill
- \begin{minipage}{0.58\textwidth}
-  \begin{center}
-   \href{http://iris-hep.org/}{\includegraphics[width=\textwidth]{IRIS-HEP_logo}}
-  \end{center}
- \end{minipage}%
- \quad
- \begin{minipage}{0.38\textwidth}
-  \begin{center}
-   \href{https://pypi.org/project/pyhf/}{\includegraphics[width=\textwidth]{pyhf_PyPI.pdf}}
-  \end{center}
-  \vspace{1em}
-  \begin{center}
-   \href{https://doi.org/10.5281/zenodo.1169739}{\includegraphics[width=\textwidth]{zenodo_doi.pdf}}
-  \end{center}
-  \vspace{3em}
- \end{minipage}%
+%  \begin{minipage}{0.58\textwidth}
+%   \begin{center}
+%    \href{http://iris-hep.org/}{\includegraphics[width=\textwidth]{IRIS-HEP_logo}}
+%   \end{center}
+%  \end{minipage}%
+%  \quad
+%  \begin{minipage}{0.38\textwidth}
+%   \begin{center}
+%    \href{https://pypi.org/project/pyhf/}{\includegraphics[width=\textwidth]{pyhf_PyPI.pdf}}
+%   \end{center}
+%   \vspace{1em}
+%   \begin{center}
+%    \href{https://doi.org/10.5281/zenodo.1169739}{\includegraphics[width=\textwidth]{zenodo_doi.pdf}}
+%   \end{center}
+%   \vspace{3em}
+%  \end{minipage}%
+\begin{center}
+  \href{https://dsi.wisc.edu/}{\includegraphics[width=\textwidth]{DSI_logo.png}}
+\end{center}
 }
 \end{document}
