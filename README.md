@@ -25,3 +25,8 @@ We're looking for posters that show what you are doing with our resources and ho
    - [Generation 2](https://www.youtube.com/watch?v=SYk29tnxASs)
 
 [Forum]: https://chtc.cs.wisc.edu/uw-research-computing/researcher-forum-2026
+
+
+<!-- RHS: Ammo bar / scratch bar
+LHS: Silent presenter bar
+   - Typical section -->
