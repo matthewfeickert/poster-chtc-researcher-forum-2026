@@ -1,6 +1,6 @@
 # [CHTC Researcher Forum 2026][Forum] Poster
 
-Poster on ... at [CHTC Researcher Forum][Forum] on February 13, 2026.
+Poster on "accelerating hardware-accelerated science" with Pixi, Linux container, and HTCondor at the [2nd CHTC Researcher Forum][Forum] on February 17, 2026.
 
 ## [Poster Criteria](https://chtc.cs.wisc.edu/uw-research-computing/researcher-forum-2026#call-for-posters)
 
